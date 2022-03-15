@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my react</title>
+</head>
+    <div id="root"></div>
+<body>
+    <script type="module">
+        import { createElement } from "./react/react.js";
+        import { render } from './react/react-dom.js'
+
+        const element = createElement('div', { id: 'container' }, 
+            createElement('div', { id: 'd1',class:'aaa',style:{color:'red'} },5),
+            createElement('div', { id: 'd2' },55),
+        )
+        console.log(element,'elemnt');
+        render(element,document.getElementById('root'))
+    </script>
+</body>
+
+</html>
